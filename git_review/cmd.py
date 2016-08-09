@@ -128,6 +128,7 @@ def build_review_number(review, patchset):
 
 
 def run_command_status(*argv, **kwargs):
+    argv = [arg for arg in argv if arg]
     if VERBOSE:
         print(datetime.datetime.now(), "Running:", " ".join(argv))
     if len(argv) == 1:
